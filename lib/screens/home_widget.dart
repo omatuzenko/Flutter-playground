@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_app/ui_utils.dart';
+import 'package:flutter_app/screens/actvity_widget.dart';
+import 'package:flutter_app/screens/groups_widget.dart';
+import 'package:flutter_app/screens/messages_widget.dart';
+import 'package:flutter_app/screens/notifications_widget.dart';
+import 'package:flutter_app/screens/more_widget.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,15 +15,23 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _currentIndex = 0;
+  final List<Widget> _children = [
+    ActivityWidget(),
+    GroupsWidget(),
+    MessagesWidget(),
+    NotificationsWidget(),
+    MoreWidget(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('My Flutter App'),
-      ),
+      body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        currentIndex: 0, // this will be set when a new tab is tapped
+        onTap: onTabTapped, // new
+        currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
             icon: new Icon(Icons.home),
@@ -43,5 +56,11 @@ class _HomeState extends State<Home> {
         ],
       ),
     );
+  }
+
+  void onTabTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
   }
 }
