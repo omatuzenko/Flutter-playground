@@ -1,0 +1,1 @@
+enum AppTab { activity, groups, messages, notifications, more }
