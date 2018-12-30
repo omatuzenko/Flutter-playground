@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/ui_utils.dart';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -7,13 +8,17 @@ class NotificationsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: UIConst.backgroundContentColor,
         appBar: AppBar(
           title: Text('Notifications'),
         ),
         body: Center(
-          child: Image.asset(
-              'backgrounds/notifications.png', scale: 3.0, width: 48.0, height: 48.0
-          ),
+          child: Flex(
+              direction: Axis.vertical,
+              children: <Widget>[
+              new Image.asset('images/notifications.png'),
+            ],
+          )
         ),
     );
   }
