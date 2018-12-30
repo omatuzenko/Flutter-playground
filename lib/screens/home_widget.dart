@@ -7,14 +7,14 @@ import 'package:flutter_app/screens/messages_widget.dart';
 import 'package:flutter_app/screens/notifications_widget.dart';
 import 'package:flutter_app/screens/more_widget.dart';
 
-class Home extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _HomeState();
+    return _HomeScreenState();
   }
 }
 
-class _HomeState extends State<Home> {
+class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     ActivityWidget(),

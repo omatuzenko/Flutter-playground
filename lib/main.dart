@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'tabs.dart';
 import 'ui_utils.dart';
 import 'routes.dart';
+import 'screens/splash_screen_widget.dart';
 import 'screens/home_widget.dart';
 
 void main() => runApp(MyApp());
@@ -17,7 +18,10 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primaryColor: UIConst.primaryColor,
       ),
-      home: Home(),
+      routes: <String, WidgetBuilder>{
+        Routes.home: (BuildContext context) => HomeScreen()
+      },
+      home: SplashScreen(),
     );
   }
 }
