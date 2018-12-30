@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_app/ui_utils.dart';
-import 'package:flutter_app/screens/actvity_widget.dart';
+import 'package:flutter_app/screens/actvity_stub_widget.dart';
 import 'package:flutter_app/screens/groups_widget.dart';
 import 'package:flutter_app/screens/messages_widget.dart';
 import 'package:flutter_app/screens/notifications_widget.dart';
@@ -17,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    ActivityWidget(),
+    ActivityStubWidget(),
     GroupsWidget(),
     MessagesWidget(),
     NotificationsWidget(),

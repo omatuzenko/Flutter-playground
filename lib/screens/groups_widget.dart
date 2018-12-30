@@ -10,8 +10,12 @@ class GroupsWidget extends StatelessWidget {
         title: Text('Groups'),
       ),
       body: Center(
-        child: Text('Groups content'),
-      ),
+          child: Flex(
+            direction: Axis.vertical,
+            children: <Widget>[
+              new Image.asset('images/groups.png'),
+            ],
+          )),
     );
   }
 }
