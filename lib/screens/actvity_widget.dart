@@ -93,7 +93,7 @@ class _ActivityWidgetState extends State<ActivityWidget> {
     );
 
     return Scaffold(
-      backgroundColor: UIConst.backgroundContentColor,
+      backgroundColor: HexColor("#ffffff"),
       appBar: AppBar(
         title: Text('Activity'),
       ),
