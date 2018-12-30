@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/model/activity.dart';
 import 'package:flutter_app/screens/details_page.dart';
 
+import 'package:flutter_app/ui_utils.dart';
+
 class ActivityWidget extends StatefulWidget {
   ActivityWidget({Key key, this.title}) : super(key: key);
 
@@ -13,11 +15,11 @@ class ActivityWidget extends StatefulWidget {
 }
 
 class _ActivityWidgetState extends State<ActivityWidget> {
-  List lessons;
+  List activityList;
 
   @override
   void initState() {
-    lessons = getActivity();
+    activityList = getActivity();
     super.initState();
   }
 
@@ -70,10 +72,10 @@ class _ActivityWidgetState extends State<ActivityWidget> {
     );
 
     Card makeCard(Activity lesson) => Card(
-      elevation: 8.0,
-      margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+      elevation: 4.0,
+      margin: new EdgeInsets.symmetric(horizontal: 8.0, vertical: 6.0),
       child: Container(
-        decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
+        decoration: BoxDecoration(color: HexColor("#00ffff")),
         child: makeListTile(lesson),
       ),
     );
@@ -83,20 +85,42 @@ class _ActivityWidgetState extends State<ActivityWidget> {
       child: ListView.builder(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount: lessons.length,
+        itemCount: activityList.length,
         itemBuilder: (BuildContext context, int index) {
-          return makeCard(lessons[index]);
+          return makeCard(activityList[index]);
         },
       ),
     );
 
     return Scaffold(
+      backgroundColor: UIConst.backgroundContentColor,
       appBar: AppBar(
-        title: Text('Groups'),
+        title: Text('Activity'),
       ),
-      body: makeBody,
+      body: RefreshIndicator(
+          child: makeBody,
+          onRefresh: _handleRefresh
+      )
     );
   }
+
+  Future<Null> _handleRefresh() async {
+    await new Future.delayed(new Duration(seconds: 3));
+
+    setState(() {
+//      _count += 5;
+    });
+
+    return null;
+  }
+}
+
+
+
+Future<Activity> fetchActivity() async {
+//  final response = await http.get("https://randomuser.me/api/");
+//  final responseJson = json.decode(response.body);
+//  return User.fromJson(responseJson);
 }
 
 List getActivity() {

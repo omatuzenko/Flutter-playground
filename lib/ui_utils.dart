@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class UIConst {
   static final Color primaryColor = HexColor("#5471ff");
+  static final Color backgroundContentColor = HexColor("#f5f6fa");
 }
 
 class HexColor extends Color {
