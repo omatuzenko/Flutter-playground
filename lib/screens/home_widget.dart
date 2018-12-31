@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_app/ui_utils.dart';
 import 'package:flutter_app/screens/actvity_stub_widget.dart';
 import 'package:flutter_app/screens/groups_widget.dart';
 import 'package:flutter_app/screens/messages_widget.dart';
-import 'package:flutter_app/screens/notifications_widget.dart';
 import 'package:flutter_app/screens/more_widget.dart';
+import 'package:flutter_app/screens/notifications_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -29,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+
         type: BottomNavigationBarType.fixed,
         onTap: onTabTapped, // new
         currentIndex: _currentIndex,
@@ -46,7 +45,17 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text('Messages')
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.notifications),
+              icon: new Stack(
+                  children: <Widget>[
+                    new Icon(Icons.notifications),
+                    new Positioned( // draw a red marble
+                      top: -1.0,
+                      right: -1.0,
+                      child: new Icon(Icons.brightness_1, size: 10.0,
+                          color: Colors.redAccent),
+                    )
+                  ]
+              ),
               title: Text('Notifications')
           ),
           BottomNavigationBarItem(
