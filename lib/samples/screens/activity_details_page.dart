@@ -1,4 +1,4 @@
-import 'package:play_with_me/samples/model/activity.dart';
+import 'package:flutter_app/samples/model/activity.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {

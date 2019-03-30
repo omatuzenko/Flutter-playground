@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:play_with_me/samples/model/activity.dart';
-import 'package:play_with_me/samples/utils/ui_utils.dart';
+import 'package:flutter_app/samples/model/activity.dart';
+import 'package:flutter_app/samples/utils/ui_utils.dart';
 
 void main() => runApp(MyApp());
 

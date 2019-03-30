@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:play_with_me/appnotekeeper/models/note.dart';
-import 'package:play_with_me/appnotekeeper/utils/db_helper.dart';
+import 'package:flutter_app/appnotekeeper/models/note.dart';
+import 'package:flutter_app/appnotekeeper/utils/db_helper.dart';
 import 'package:sqflite/sqflite.dart';
 
 class NoteDetail extends StatefulWidget {
