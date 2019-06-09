@@ -1,7 +1,7 @@
 import 'book.dart';
-import 'detail.dart';
+import 'screen_detail.dart';
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'screen_home.dart';
 
 void main() => runApp(new MyApp());
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  ///Generate parameterized route --> e.g: detail/some book title
+  /// Generate parameterized route --> e.g: detail/some book title
   generateRoute(RouteSettings settings) {
     final path = settings.name.split('/');
     final title = path[1];

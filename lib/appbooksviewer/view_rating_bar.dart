@@ -5,8 +5,7 @@ class RatingBar extends StatelessWidget {
   final double rating;
   final Color color;
 
-  RatingBar(
-      {this.starCount = 5, this.rating = 0.0, this.color = Colors.black87});
+  RatingBar({this.starCount = 5, this.rating = 0.0, this.color = Colors.black87});
 
   ///create star
   Widget buildStar(BuildContext context, int index) {
