@@ -20,7 +20,7 @@ dependencies:
   path_provider: 0.5.0
   # https://pub.dartlang.org/packages/intl
   intl: 0.15.7
-#  fluttery_seekbar: ^0.0.1
+  fluttery_seekbar: ^0.0.1
 
 dev_dependencies:
   flutter_test:
