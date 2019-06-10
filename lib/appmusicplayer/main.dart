@@ -37,6 +37,13 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    print("Screen width is ${MediaQuery.of(context).size.width}");
+    print("Screen height is ${MediaQuery.of(context).size.height}");
+    print("Screen acpect ratio is ${MediaQuery.of(context).size.aspectRatio}");
+    print("Screen longest side is ${MediaQuery.of(context).size.longestSide}");
+    print("Screen shortest side is ${MediaQuery.of(context).size.shortestSide}");
+    var isLargeScreen = MediaQuery.of(context).size.width > 600;
+
     return new Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
