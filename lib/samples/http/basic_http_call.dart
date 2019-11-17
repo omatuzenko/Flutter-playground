@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
 
-/**
- * Add http: 0.12.0+1 to pubspec.yaml
- */
+/// Add http: 0.12.0+1 to pubspec.yaml
 void main() {
   runApp(new MaterialApp(
     home: new HomePage(),
@@ -46,15 +44,15 @@ class HomePageState extends State<HomePage> {
     );
   }
 
-  /**
-   * [
-      {
-      "userId": 1,
-      "id": 1,
-      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-      },
-   */
+  ///
+  ///  [
+  ///   {
+  ///     "userId": 1,
+  ///     "id": 1,
+  ///     "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  ///     "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  ///    },
+  ///  ]
   Future<String> getData() async {
     http.Response response = await http.get(
       Uri.encodeFull("https://jsonplaceholder.typicode.com/posts"),
