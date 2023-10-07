@@ -1,4 +1,4 @@
-# playground_autumn
+# playground
 
 A new Flutter project.
 
