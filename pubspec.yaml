@@ -40,9 +40,9 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/projects/booksviewer/
-
-    - assets/images/onboarding/
-    - assets/images/viewpagerparallax/
+    - assets/images/projects/onboarding/
+    - assets/images/projects/viewpagerparallax/
+    -
     - assets/images/musicplayer/
 
   uses-material-design: true
