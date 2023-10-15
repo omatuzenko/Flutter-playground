@@ -1,5 +1,5 @@
-import 'book.dart';
-import 'widget_rating_bar.dart';
+import '../model/book.dart';
+import '../widget/rating_bar.dart';
 import 'package:flutter/material.dart';
 
 class Detail extends StatelessWidget {

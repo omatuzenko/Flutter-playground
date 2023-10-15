@@ -1,10 +1,9 @@
-import 'book.dart';
+import '../model/book.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //app bar
     final appBar = AppBar(
       elevation: .5,
       leading: IconButton(

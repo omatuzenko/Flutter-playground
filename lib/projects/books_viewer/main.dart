@@ -1,7 +1,7 @@
-import 'book.dart';
-import 'screen_detail.dart';
+import 'model/book.dart';
+import 'screen/book_details.dart';
 import 'package:flutter/material.dart';
-import 'screen_home.dart';
+import 'screen/home.dart';
 
 void main() => runApp(MyApp());
 
